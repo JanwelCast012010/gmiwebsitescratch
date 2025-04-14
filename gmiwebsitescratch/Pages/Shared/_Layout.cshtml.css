@@ -46,3 +46,70 @@ button.accept-policy {
   white-space: nowrap;
   line-height: 60px;
 }
+/* FOOTER */
+.footer-gradient {
+    background-image: linear-gradient(to right, #000428, #004e92); /* Same gradient as the navbar */
+    color: white; /* White text color */
+    text-align: center; /* Center-align text */
+    padding: 1rem; /* Add padding for spacing */
+    font-size: 0.9rem; /* Adjust font size */
+    border-top: none; /* Remove any border */
+}
+
+    .footer-gradient a {
+        color: #d1e8ff; /* Light blue for links */
+        text-decoration: none; /* Remove underline */
+    }
+
+        .footer-gradient a:hover {
+            color: #ffffff; /* White on hover */
+            text-decoration: underline; /* Add underline on hover */
+        }
+
+/* scrolling down */
+.info-section {
+    padding: 4rem 2rem; /* Add spacing inside each section */
+    text-align: center; /* Center-align text */
+    background-color: #f8f9fa; /* Light background color */
+    color: #333; /* Dark text color */
+    border-bottom: 1px solid #ddd; /* Add a subtle border between sections */
+}
+
+    .info-section:nth-child(even) {
+        background-color: #e9ecef; /* Alternate background color for contrast */
+    }
+
+.section-title {
+    font-size: 2.5rem; /* Larger font size for section titles */
+    margin-bottom: 1rem; /* Add spacing below the title */
+    color: #004e92; /* Use a color matching the theme */
+}
+
+.section-image {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    border-radius: 10px; /* Add rounded corners to images */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.team-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%; /* Make team images circular */
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.large-image {
+    max-width: 100%; /* Ensure the image doesn't exceed the container width */
+    width: 800px; /* Set a specific width for the image */
+    height: auto; /* Maintain the aspect ratio */
+    margin: 1rem auto; /* Center the image and add spacing */
+    display: block; /* Ensure the image is treated as a block element */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+
+

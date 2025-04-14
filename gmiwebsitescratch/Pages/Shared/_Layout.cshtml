@@ -5,15 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>German Motors Inc. - Delodur</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/gmiwebsitescratch.styles.css" asp-append-version="true" />
 
     <style>
-        /* Make page always fill the screen height */
-        html, body {
-            height: 100%;
-        }
+
 
         body {
             display: flex;
@@ -70,14 +68,104 @@
         @RenderBody()
     </main>
 
-    <footer>
+
+    <!-- New Sections -->
+    <section id="services" class="info-section" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="row">
+                <div class="col-md-4" data-aos="fade-right">
+                    <img src="~/img/42.jpg" alt="Services" class="section-image">
+                    <p>We provide top-notch automotive services to keep your vehicle running smoothly.</p>
+                </div>
+                <div class="col-md-4" data-aos="fade-up">
+                    <img src="~/img/58.jpg" alt="Repair" class="section-image">
+                    <p>Expert repair services for all makes and models.</p>
+                </div>
+                <div class="col-md-4" data-aos="fade-left">
+                    <img src="~/img/34.jpg" alt="Maintenance" class="section-image">
+                    <p>Regular maintenance to ensure your car's longevity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="parts" class="info-section" data-aos="zoom-in">
+        <div class="container">
+            <h2 class="section-title">Parts</h2>
+            <p>We offer a wide range of high-quality automotive parts for all makes and models.</p>
+            <img src="~/img/44.jpg" alt="Parts" class="section-image large-image">
+        </div>
+    </section>
+    <section id="about" class="info-section" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <p>German Motors Inc. - Delodur has been a trusted name in the automotive industry for over 14 years. Our mission is to provide exceptional service and quality parts to our customers.</p>
+            <img src="~/img/about.jpg" alt="About Us" class="section-image large-image">
+        </div>
+    </section>
+
+    <section id="team" class="info-section" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title">Our Team</h2>
+            <div class="row">
+                <div class="col-md-3" data-aos="fade-right">
+                    <img src="~/img/team1.jpg" alt="Team Member 1" class="team-image">
+                    <p>Name - President</p>
+                </div>
+                <div class="col-md-3" data-aos="fade-up">
+                    <img src="~/img/team2.jpg" alt="Team Member 2" class="team-image">
+                    <p>Name - Lead Mechanic</p>
+                </div>
+                <div class="col-md-3" data-aos="fade-up">
+                    <img src="~/img/team3.jpg" alt="Team Member 3" class="team-image">
+                    <p>Name - Customer Support</p>
+                </div>
+                <div class="col-md-3" data-aos="fade-left">
+                    <img src="~/img/team4.jpg" alt="Team Member 4" class="team-image">
+                    <p>Name - Parts Specialist</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="contact" class="info-section" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <p>Get in touch with us for inquiries, appointments, or support.</p>
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="3" placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer-gradient">
         &copy; 2025 German Motors Inc. - <a asp-area="" asp-page="/Privacy">Privacy Policy</a>
     </footer>
+
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

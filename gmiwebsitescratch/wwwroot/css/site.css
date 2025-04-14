@@ -17,15 +17,32 @@ html {
   min-height: 100%;
 }
 
+.section-image {
+    max-width: 100%; /* Ensure the image doesn't exceed its container width */
+    height: auto; /* Maintain aspect ratio */
+    width: 500px; /* Set a specific width for the image */
+    margin: 1rem auto; /* Center the image and add spacing */
+    display: block; /* Ensure the image is treated as a block element */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+.large-image {
+    max-width: 100%; /* Ensure the image doesn't exceed the container width */
+    width: 1000px; /* Set a specific width for the image */
+    height: auto; /* Maintain the aspect ratio */
+    margin: 1rem auto; /* Center the image and add spacing */
+    display: block; /* Ensure the image is treated as a block element */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
 
 body {
     background-image: url('../img/1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: fixed; /* Keeps the background image fixed while scrolling */
     position: relative; /* Ensure the pseudo-element is positioned relative to the body */
 }
-
     body::before {
         content: '';
         position: absolute;
@@ -69,21 +86,29 @@ body {
     font-size: 9rem; /* Increase the font size */
     margin: 0; /* Remove any default margins for better alignment */
 }
+.gradient-grey-box h1 {
+    font-size: 9rem; /* Increase the font size */
+    margin: 0; /* Remove any default margins for better alignment */
+}
 .thin-text {
     font-weight: 300; /* Thin font weight */
 }
 @font-face {
     font-family: 'Neue Helvetica';
-    src: url('../fonts/NeueHelvetica-Bold.ttf') format('truetype');
+    src: url('../fonts/HelveticaNeueBold.otf') format('truetype');
     font-weight: bold;
     font-style: normal;
+    font-family: 'Helvetica Neue Roman';
+    src: url('../fonts/HelveticaNeueRoman.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
 }
-
 .custom-font {
     font-family: 'Neue Helvetica', sans-serif; /* Use Neue Helvetica with a fallback */
 }
-
 .gradient-box {
+    flex: 0 0 45%; /* Ensure each box takes up 45% of the width */
+    max-width: 600px; /* Optional: Set a maximum width */
     background-image: linear-gradient(to right, #000428, #004e92); /* Gradient background */
     color: white; /* White text color */
     padding: 4rem; /* Increase padding for more space inside the box */
@@ -104,7 +129,14 @@ box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
 }
 .d-flex {
     display: flex; /* Enable flexbox */
+    justify-content: space-between; /* Space between the boxes */
+    align-items: center; /* Vertically center the boxes */
+    padding: 0 2rem; /* Add padding on the sides */
+    transform: translateY(-10%); /* Move the boxes up by 10% */
+    min-height: calc(100vh - 155px); /* Subtract the footer height */
+    padding-top: 100px;
 }
+
 
 .align-items-center {
     align-items: center; /* Vertically center the content */
@@ -136,6 +168,58 @@ box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
     transform: scale(1.05); /* Slightly enlarge the button on hover */
     color: white; /* Button text color */
 }
+/* Second Box */
+.gradient-grey-box {
+    background-image: linear-gradient(to right, #2c2c2c, #1a1a1a);
+    color: white; /* Ensure text is readable */
+    padding: 4rem; /* Add padding for spacing */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    flex: 0 0 45%; /* Ensure consistent size with the other box */
+    max-width: 600px; /* Optional: Set a maximum width */
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+    .gradient-grey-box:hover {
+        transform: scale(1.05); /* Slightly enlarge the box on hover */
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+    }
+.info-section {
+    padding: 4rem 2rem; /* Add spacing inside each section */
+    text-align: center; /* Center-align text */
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    color: #333; /* Dark text color */
+    border-bottom: 1px solid #ddd; /* Add a subtle border between sections */
+}
+
+    .info-section:nth-child(even) {
+        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background for contrast */
+        color: white; /* Light text color for dark background */
+    }
+.btn-custom-grey {
+    background-color: #fff; /* Set the button background to white */
+    color: #000; /* Set the text color to the gradient blue */
+    padding: 0.75rem 1.5rem; /* Add padding for a larger button */
+    font-size: 1.25rem; /* Increase font size */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+    text-decoration: none; /* Remove underline */
+}
+
+.gradient-grey-box .btn-custom-grey:hover {
+    background-color: black; /* Button background color */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+    color: #000; /* Button text color */
+}
+
+
+
+
 
 
 
