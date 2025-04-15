@@ -208,7 +208,9 @@ box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
     border: none; /* Remove border */
     border-radius: 5px; /* Rounded corners */
     transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
-    text-decoration: none; /* Remove underline */
+    text-decoration: none; /* Remove underline
+        color: #000; /* Button text color */
+    */
 }
 
 .gradient-grey-box .btn-custom-grey:hover {
