@@ -217,6 +217,7 @@ box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
     background-color: black; /* Button background color */
     transform: scale(1.05); /* Slightly enlarge the button on hover */
     color: #000; /* Button text color */
+    /* Slightly enlarge the button on hover */
 }
 
 
